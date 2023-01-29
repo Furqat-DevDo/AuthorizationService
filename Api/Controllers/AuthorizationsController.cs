@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Core.DTO.Authorization;
 using Core.Services;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -13,11 +15,13 @@ public class AuthorizationsController : ControllerBase
 {
     private readonly IMapper _mapper;
     private readonly IAuthorizationService _service;
-    
-    public AuthorizationsController(IMapper mapper,IAuthorizationService service)
+    private readonly IValidator<CreateUserDto> _validator;
+
+    public AuthorizationsController(IMapper mapper,IAuthorizationService service,IValidator<CreateUserDto> validator)
     {
         _mapper = mapper;
         _service = service;
+        _validator = validator;
     }
     
     [SwaggerOperation(Summary = "Registers new user in our system")]
@@ -25,8 +29,10 @@ public class AuthorizationsController : ControllerBase
     [HttpPost("Registration")]
     public async Task<IActionResult> RegisterUsersAsync([FromBody] CreateUserDto userDto)
     {
-        
-        return Ok();
+        var validationResult = await _validator.ValidateAsync(userDto);
+        if (validationResult.IsValid is true) return Ok();
+        validationResult.AddToModelState(this.ModelState);
+        return BadRequest(ModelState);
     }
     
     [SwaggerOperation(Summary = "Confirm Registered user")]
