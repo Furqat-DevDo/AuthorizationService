@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.DTO;
+using Core.DTO.Authorization;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -32,7 +33,7 @@ public class AuthorizationsController : ControllerBase
     [SwaggerOperation(Summary = "Confirm Registered user")]
     [SwaggerResponse(200, "Returns Jwt token for user", typeof(string))]
     [HttpPut("Registration")]
-    public async Task<IActionResult> ConfirmUsersAsync()
+    public async Task<IActionResult> ConfirmUsersAsync([FromBody] ConfirmationDto confirmationDto)
     {
         return Ok();
     }
