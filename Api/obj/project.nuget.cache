@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YTbu33IeW56vZ9whWRYRbdQ4gpE7yxYpHv6qnXkcMtYxKxfkhl23zgYgPSfiJhiST1WMjGYbc9TCnMXtQV9tjA==",
+  "dgSpecHash": "dH2VQSGnDWu3ZGUDOXH3rJ24q8TpIsWKqPgd2V46BWj67AVRKSA/tHcN70sxN5DXhNZ7rQ+KSZeP0TVVYGNAJw==",
   "success": true,
   "projectFilePath": "C:\\Users\\furqa\\RiderProjects\\SelfStudy\\Api\\Api.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,9 @@
     "C:\\Users\\furqa\\.nuget\\packages\\delegatedecompiler\\0.28.0\\delegatedecompiler.0.28.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\delegatedecompiler.entityframework\\0.28.0\\delegatedecompiler.entityframework.0.28.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\furqa\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\furqa\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\furqa\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",

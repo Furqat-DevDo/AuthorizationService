@@ -1,5 +1,5 @@
-using Core.Mappers;
 using Microsoft.OpenApi.Models;
+using SelfStudy;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,9 @@ services.AddSwaggerGen(c =>
 
 services.AddControllers();
 services.AddEndpointsApiExplorer();
+services.AddMyService();
 services.AddAutoMapper(typeof(Program).Assembly);
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -23,10 +25,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting();
 app.UseSwagger();
+
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tes Api V1");
 });
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();

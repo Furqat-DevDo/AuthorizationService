@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Core.DTO.Authentication;
+using Core.Services;
+using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace SelfStudy.Controllers;
@@ -7,10 +10,17 @@ namespace SelfStudy.Controllers;
 [Route("api/[controller]")]
 public class AuthenticationsController : ControllerBase
 {
+    private readonly IMapper _mapper;
+    private readonly IAuthenticationService _authenticationService;
+    public AuthenticationsController(IMapper mapper,IAuthenticationService authenticationService)
+    {
+        _mapper = mapper;
+        _authenticationService = authenticationService;
+    }
     [SwaggerOperation(Summary = "Log in user in our system")]
     [SwaggerResponse(200, "Returns jwt token for user", typeof(string))]
     [HttpPost("Login")]
-    public async Task<IActionResult> LoginUsersAsync()
+    public async Task<IActionResult> LoginUsersAsync(LoginDto loginDto)
     {
         return Ok();
     }

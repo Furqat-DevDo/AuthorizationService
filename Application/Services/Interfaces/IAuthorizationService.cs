@@ -1,9 +1,11 @@
 ﻿using Core.DTO;
+using Core.DTO.Authorization;
 using Domain.Models;
 
 namespace Core.Services;
 
 public interface IAuthorizationService
 {
-    UserModel RegisterUserAsync(CreateUserDto userDto);
+    UserModel RegisterUserAsyc(CreateUserDto userDto);
+    
 }
