@@ -1,5 +1,5 @@
-using Core.Services;
 using Microsoft.OpenApi.Models;
+using SelfStudy;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,9 +13,8 @@ services.AddSwaggerGen(c =>
 
 services.AddControllers();
 services.AddEndpointsApiExplorer();
+services.AddMyService();
 services.AddAutoMapper(typeof(Program).Assembly);
-services.AddScoped<IAuthorizationService, AuthorizationService>();
-services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 var app = builder.Build();
 

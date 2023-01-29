@@ -1,6 +1,8 @@
-﻿namespace Core.Contexts;
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
-public class ApplicationDbContext
+namespace Core.Contexts;
+public class ApplicationDbContext : DbContext
 {
-    
+    private DbSet<User> Users { get; set; }
 }
