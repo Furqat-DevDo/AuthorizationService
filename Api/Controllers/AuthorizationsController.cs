@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Core.DTO;
 using Core.DTO.Authorization;
 using Core.Services;
 using Microsoft.AspNetCore.Mvc;

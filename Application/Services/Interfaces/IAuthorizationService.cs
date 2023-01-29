@@ -1,5 +1,4 @@
-﻿using Core.DTO;
-using Core.DTO.Authorization;
+﻿using Core.DTO.Authorization;
 using Domain.Models;
 
 namespace Core.Services;
