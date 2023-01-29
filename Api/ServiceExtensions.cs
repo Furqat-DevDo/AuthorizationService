@@ -1,5 +1,4 @@
-﻿using Core.Contexts;
-using Core.Services;
+﻿using Core.Services;
 using FluentValidation;
 using SelfStudy.Validations;
 
@@ -12,7 +11,6 @@ public static class ServiceExtensions
         services.AddScoped<IAuthorizationService, AuthorizationService>();
         services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddValidatorsFromAssemblyContaining<CreateUserDtoValidator>();
-        services.AddDbContext<ApplicationDbContext>();
         return services;
     }
 }

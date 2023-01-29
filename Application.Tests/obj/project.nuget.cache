@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tp7JJhKmm5bnPBYlM0YxoN2LvC424M11Ru7zJAVNaDm1fz7c7HHn8hi+e82s/9JvEvxVGp3Id8aoFLdZ98SQzg==",
+  "dgSpecHash": "jWE3cuEIat4GZRIk3uNJdbKZ9LI0lbxs7Znx/9cBPFCKa0kBVzQ+6aI3HEJZPQPH97Dn/f1OB8mZzaJrrdvSxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\furqa\\RiderProjects\\SelfStudy\\Application.Tests\\Application.Tests.csproj",
+  "projectFilePath": "C:\\Users\\furqa\\AuthorizationService\\Application.Tests\\Application.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\furqa\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

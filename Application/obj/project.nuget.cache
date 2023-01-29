@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NR5nUGBM11KjhmcAuWZCmJ6EIiwLGjceCBzW8Epoy6DPUkdINOQgQMe6Nou2zmzLi9EraiW6f+i2Bsgd1Bkuig==",
+  "dgSpecHash": "eB5A72YvyzksEJAqNkvdotFCwCHic3LRRONIWTKnvuQfGnvoIkVtoIGmdmMiDujnBulJmxeslerZwsr/XL0haA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\furqa\\RiderProjects\\SelfStudy\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\furqa\\AuthorizationService\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\furqa\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\automapper.ef6\\2.1.1\\automapper.ef6.2.1.1.nupkg.sha512",

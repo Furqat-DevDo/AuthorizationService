@@ -1,3 +1,5 @@
+using Core.Contexts;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using SelfStudy;
 
@@ -10,10 +12,12 @@ services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Test API", Version = "v1" });
     c.EnableAnnotations();
 });
+services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("MyConnection")));
+services.AddMyService();
 
 services.AddControllers();
 services.AddEndpointsApiExplorer();
-services.AddMyService();
 services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();

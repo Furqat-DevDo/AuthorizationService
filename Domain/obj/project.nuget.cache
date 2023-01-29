@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QCuZlErN8xxY+PCzFpdXOxrMHmypn4FWWPciMZgOmGWfe6MQRC8/6Y86TeKieKgJWcRngw+WQ972C4m1phZU5w==",
+  "dgSpecHash": "Wd3B3k+WGyLydNaJWysWb56vtxnOmRG43ixXfEAxYVJfk1xye7mUHg05zU+23XWv3tj4N5df9o3bniCKSWuMxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\furqa\\RiderProjects\\SelfStudy\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\furqa\\AuthorizationService\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\furqa\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
