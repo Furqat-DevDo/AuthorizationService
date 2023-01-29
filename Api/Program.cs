@@ -1,4 +1,4 @@
-using Core.Mappers;
+using Core.Services;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +14,9 @@ services.AddSwaggerGen(c =>
 services.AddControllers();
 services.AddEndpointsApiExplorer();
 services.AddAutoMapper(typeof(Program).Assembly);
+services.AddScoped<IAuthorizationService, AuthorizationService>();
+services.AddScoped<IAuthenticationService, AuthenticationService>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -23,10 +26,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting();
 app.UseSwagger();
+
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tes Api V1");
 });
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
