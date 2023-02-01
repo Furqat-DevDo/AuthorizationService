@@ -6,33 +6,30 @@ var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 
-services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseNpgsql(builder.Configuration.GetConnectionString("MyConnection")));
+services.AddDbContext<IApplicationDbContext,ApplicationDbContext>(options =>
+            options.UseLazyLoadingProxies()
+                .UseNpgsql(builder.Configuration.GetConnectionString("MyConnection")));
 
-services.AddMyService();
+builder.Services.AddControllers()
+    .AddJsonOptions(options => 
+        options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull);
 
-services.AddControllers();
 services.AddEndpointsApiExplorer();
+services.AddMyService();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tes Api V1");
+    });
 }
-
+app.UseHttpsRedirection();
 app.UseRouting();
-app.UseSwagger();
-
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tes Api V1");
-});
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
+app.MapControllers();
 
 app.Run();
 

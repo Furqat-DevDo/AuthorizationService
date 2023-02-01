@@ -30,9 +30,13 @@ public class AuthorizationsController : ControllerBase
     public async Task<IActionResult> RegisterUsersAsync([FromBody] CreateUserDto userDto)
     {
         var validationResult = await _validator.ValidateAsync(userDto);
-        if (validationResult.IsValid is true) return Ok();
-        validationResult.AddToModelState(this.ModelState);
-        return BadRequest(ModelState);
+        if (validationResult.IsValid is false)
+        {
+             validationResult.AddToModelState(this.ModelState);
+                        return BadRequest(ModelState);
+        }
+
+        return Ok();
     }
     
     [SwaggerOperation(Summary = "Confirm Registered user")]
