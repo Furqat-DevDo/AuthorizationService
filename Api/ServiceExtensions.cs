@@ -16,6 +16,7 @@ public static class ServiceExtensions
         services.AddScoped<IAuthorizationService, AuthorizationService>();
         services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddTransient<IValidator<CreateUserDto>, CreateUserDtoValidator>();
+        services.AddTransient<IValidator<ConfirmationDto>, ConfirmationDtoValidator>();
 
         services.AddAutoMapper(typeof(Program).Assembly);
         services.AddSwaggerGen(c =>
