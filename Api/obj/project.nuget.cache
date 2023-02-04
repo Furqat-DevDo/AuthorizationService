@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Av18JJe4c09f4uatubmp6Vu3DteLaiFX0ncvTpBYUr/XAXJJsFrSkaiK+glwTLq95Aazuq2ZMSxv8eoUsQVjHw==",
+  "dgSpecHash": "yUDIcYhAtUWpqiDgw4lq/32HFBohDAFCkI7ptndvXfRxAdNaBcgYURM8mK0ZH9rIEHXyEfM59iXdI2u7WDm91w==",
   "success": true,
   "projectFilePath": "C:\\Users\\furqa\\AuthorizationService\\Api\\Api.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\furqa\\.nuget\\packages\\automapper.extensions.enummapping\\3.0.1\\automapper.extensions.enummapping.3.0.1.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\automapper.extensions.expressionmapping\\6.0.3\\automapper.extensions.expressionmapping.6.0.3.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\furqa\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\delegatedecompiler\\0.28.0\\delegatedecompiler.0.28.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\delegatedecompiler.entityframework\\0.28.0\\delegatedecompiler.entityframework.0.28.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
@@ -19,6 +20,7 @@
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.2\\microsoft.entityframeworkcore.analyzers.7.0.2.nupkg.sha512",
+    "C:\\Users\\furqa\\.nuget\\packages\\microsoft.entityframeworkcore.proxies\\7.0.2\\microsoft.entityframeworkcore.proxies.7.0.2.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.1\\microsoft.entityframeworkcore.relational.7.0.1.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
@@ -48,6 +50,7 @@
     "C:\\Users\\furqa\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
+    "C:\\Users\\furqa\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\furqa\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",

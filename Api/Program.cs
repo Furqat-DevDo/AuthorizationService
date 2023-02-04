@@ -1,44 +1,35 @@
-using Core.Contexts;
+using Dal.Contexts;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
 using SelfStudy;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 
-services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Test API", Version = "v1" });
-    c.EnableAnnotations();
-});
-services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseNpgsql(builder.Configuration.GetConnectionString("MyConnection")));
-services.AddMyService();
+services.AddDbContext<IApplicationDbContext,ApplicationDbContext>(options =>
+            options.UseLazyLoadingProxies()
+                .UseNpgsql(builder.Configuration.GetConnectionString("MyConnection")));
 
-services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options => 
+        options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull);
+
 services.AddEndpointsApiExplorer();
-services.AddAutoMapper(typeof(Program).Assembly);
+services.AddMyService();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tes Api V1");
+    });
 }
-
+app.UseHttpsRedirection();
 app.UseRouting();
-app.UseSwagger();
-
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Tes Api V1");
-});
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
+app.MapControllers();
 
 app.Run();
 

@@ -152,3 +152,5 @@ C:\Users\furqa\AuthorizationService\Api\obj\Debug\net6.0\refint\Api.dll
 C:\Users\furqa\AuthorizationService\Api\obj\Debug\net6.0\Api.pdb
 C:\Users\furqa\AuthorizationService\Api\obj\Debug\net6.0\Api.genruntimeconfig.cache
 C:\Users\furqa\AuthorizationService\Api\obj\Debug\net6.0\ref\Api.dll
+C:\Users\furqa\AuthorizationService\Api\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\furqa\AuthorizationService\Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll

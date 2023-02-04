@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Core.DTO.Authorization;
+using Domain.DTO.Authorization;
 using Domain.Entities;
 using Domain.Models;
 
