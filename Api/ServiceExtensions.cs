@@ -1,8 +1,6 @@
-﻿using System.Reflection;
-using Core.Services;
+﻿using Core.Services;
 using Domain.DTO.Authorization;
 using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
 using SelfStudy.Validations;
 
@@ -16,6 +14,7 @@ public static class ServiceExtensions
         services.AddScoped<IAuthorizationService, AuthorizationService>();
         services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddTransient<IValidator<CreateUserDto>, CreateUserDtoValidator>();
+        services.AddTransient<IValidator<ConfirmationDto>, ConfirmationDtoValidator>();
 
         services.AddAutoMapper(typeof(Program).Assembly);
         services.AddSwaggerGen(c =>
