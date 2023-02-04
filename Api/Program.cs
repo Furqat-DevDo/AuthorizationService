@@ -1,3 +1,4 @@
+
 using Core.Contexts;
 using Microsoft.EntityFrameworkCore;
 using SelfStudy;
@@ -8,7 +9,7 @@ var services = builder.Services;
 
 services.AddDbContext<IApplicationDbContext,ApplicationDbContext>(options =>
             options.UseLazyLoadingProxies()
-                .UseNpgsql(builder.Configuration.GetConnectionString("MyConnection")));
+                .UseNpgsql(builder.Configuration.GetConnectionString("MyConnection"),b => b.MigrationsAssembly("Api")));
 
 builder.Services.AddControllers()
     .AddJsonOptions(options => 

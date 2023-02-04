@@ -9,7 +9,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace SelfStudy.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/Registration")]
 
 public class AuthorizationsController : ControllerBase
 {
@@ -29,7 +29,7 @@ public class AuthorizationsController : ControllerBase
     
     [SwaggerOperation(Summary = "Registers new user in our system")]
     [SwaggerResponse(201, "Returns information about registered user", typeof(string))]
-    [HttpPost("Registration")]
+    [HttpPost]
     public async Task<IActionResult> RegisterUsersAsync([FromBody] CreateUserDto userDto)
     {
         var validationResult = await _validator.ValidateAsync(userDto);
@@ -46,7 +46,7 @@ public class AuthorizationsController : ControllerBase
     
     [SwaggerOperation(Summary = "Confirm Registered user")]
     [SwaggerResponse(200, "Returns Jwt token for user", typeof(string))]
-    [HttpPut("Registration")]
+    [HttpPut]
     public async Task<IActionResult> ConfirmUsersAsync([FromBody] ConfirmationDto confirmationDto)
     {
         var vaildationResult = await _confirmationValidator.ValidateAsync(confirmationDto);
