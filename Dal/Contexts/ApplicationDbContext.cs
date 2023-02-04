@@ -1,8 +1,7 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace Core.Contexts;
+namespace Dal.Contexts;
 public class ApplicationDbContext : DbContext,IApplicationDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :base (options){}

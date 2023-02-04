@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Core.DTO.Authentication;
 using Core.Services;
+using Domain.DTO.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

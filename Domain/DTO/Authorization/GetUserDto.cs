@@ -1,4 +1,4 @@
-﻿namespace Core.DTO.Authorization;
+﻿namespace Domain.DTO.Authorization;
 
 public class GetUserDto
 {

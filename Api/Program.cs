@@ -1,4 +1,4 @@
-using Core.Contexts;
+using Dal.Contexts;
 using Microsoft.EntityFrameworkCore;
 using SelfStudy;
 
